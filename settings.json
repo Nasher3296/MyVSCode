@@ -1,7 +1,52 @@
 {
+    "todo-tree.tree.showScanModeButton": false,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "code-runner.saveFileBeforeRun": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/**.exe": true,
+        "**/.factorypath": true
+    },
+    "explorer.confirmDelete": false,
     "java.home": "D:\\Cursos\\Java\\jdk-15.0.1",
-    "window.zoomLevel": 2,
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "terminal.integrated.allowChords": false,
+    "code-runner.runInTerminal": true,
+    "editor.renderWhitespace": "none",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Jetbrains Mono",
+    "editor.fontSize": 16,
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "workbench.editorAssociations": [
+    
+    ],
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.env.windows": {
+    
+    },
+    "terminal.explorerKind": "external",
+    "terminal.external.windowsExec": "C:\\WINDOWS\\SYSTEM32\\cmd.exe",
+    "terminal.integrated.fontFamily": "Jetbrains Mono",
+    "c-cpp-compile-run.run-in-external-terminal": true,
+    "java.debug.settings.console": "externalTerminal",
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "material-icon-theme",
+    "C_Cpp.files.exclude": {
+        "**/.vscode": true
+    },
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.colorTheme": "Community Material Theme Palenight"
+    "workbench.colorTheme": "Community Material Theme Palenight",
 }
