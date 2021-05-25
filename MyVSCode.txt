@@ -4,7 +4,7 @@ Instalation
     https://platzi.com/tutoriales/1189-algoritmos-2017/2765-compilando-cc-desde-visual-studio-code-windows-10/
 
 GitHub
-    https://github.com/Nasher3296/VsCodeSettings.git
+    https://github.com/Nasher3296/MyVSCode
     itmems with (G*) are in my github
 
 Settings 
@@ -124,7 +124,7 @@ Extensions:                 essential for C --> (*)
 Snippets:
     C:
         My C snippets:
-        Paste c.json (G*) in: "C:\Users\USUARIO\AppData\Roaming\Code\User\snippets"
+        Paste snippets/c.json (G*) in: "C:\Users\USUARIO\AppData\Roaming\Code\User\snippets"
         If the path doesn't exist create it in "C:\Users\USUARIO\AppData\Roaming\Code\User"
 
         or
