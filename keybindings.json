@@ -21,7 +21,7 @@
         "command": "workbench.action.terminal.resizePaneRight"
     },
     {
-        "key": "alt+numpad5",
+        "key": "alt+numpad_add",
         "command": "code-runner.run"
     },
     {
@@ -237,7 +237,7 @@
         "command": "workbench.action.editorLayoutSingle"
     },
     {
-        "key": "ctrl+numpad_decimal",
+        "key": "alt+numpad_subtract",
         "command": "workbench.action.terminal.kill"
     },
     {

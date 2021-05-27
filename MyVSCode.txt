@@ -1,4 +1,4 @@
-    Enlaces: 
+Enlaces: 
 
 Instalation
     https://platzi.com/tutoriales/1189-algoritmos-2017/2765-compilando-cc-desde-visual-studio-code-windows-10/
@@ -88,9 +88,9 @@ Shortcuts/Keybindings
         ctrl + alt + w          --> add label (HTML)            --> Emmet: Wrap with abbreviation       (default)
         ctrl + shift + p        --> show all commands           --> Show all commands                   (default)
         ctrl + 5(numpad)        --> run in external terminal    --> CompileRun: Compile with default... 
-        alt  + 5(numpad)        --> run in integrated           --> Run Code 
+        alt  + +(numpad)        --> run in integrated           --> Run Code 
         ctrl + .(numpad)        --> Kill terminal               --> Termianl: Kill the active terminal
-        alt  + .(numpad)        --> Kill terminal               --> Termianl: Kill the active terminal  (default)
+        alt  + -(numpad)        --> Kill terminal               --> Termianl: Kill the active terminal  (default)
 
 
 
