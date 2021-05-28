@@ -32,6 +32,8 @@ Settings
             Zoom in/out with mouseWheelZoom (ctrl + scrollUp/Down)
             Settings    > Editor: Mouse wheel zoom > On
 
+For more comfort open a folder to work files in it -->  ((ctrl + k) + (ctrl + o)) or  File > Open Folder
+    You will need this to use some extensions, like Live Server
 
 Shortcuts/Keybindings
     My Shortcuts:
