@@ -1,6 +1,9 @@
 Enlaces: 
 
-Instalation
+Download VSCode
+    https://code.visualstudio.com/
+    
+C instalation guide
     https://platzi.com/tutoriales/1189-algoritmos-2017/2765-compilando-cc-desde-visual-studio-code-windows-10/
 
 GitHub
@@ -11,7 +14,7 @@ Settings
     open settings.json       f1 --> ">preferences: Open settings (JSON)"
 
     My settings:
-        Paste settings.json (G*) in: "C:\Users\USUARIO\AppData\Roaming\Code\User"
+        Paste settings.json (G*) in: "C:\Users\USER\AppData\Roaming\Code\User"
     
         Font: JetBrains Mono:   https://www.jetbrains.com/es-es/lp/mono/
                                 Or JetBrainsMono-2.225.zip (G*)
@@ -37,7 +40,7 @@ For more comfort open a folder to work files in it -->  ((ctrl + k) + (ctrl + o)
 
 Shortcuts/Keybindings
     My Shortcuts:
-    Paste keybindings.json (G*) in: "C:\Users\USUARIO\AppData\Roaming\Code\User"
+    Paste keybindings.json (G*) in: "C:\Users\USER\AppData\Roaming\Code\User"
 
     Or do it by yourself
     File > Preferences > Keyboard Shortcuts (ctrl+k ctrl+s) 
@@ -126,8 +129,8 @@ Extensions:                 essential for C --> (*)
 Snippets:
     C:
         My C snippets:
-        Paste snippets/c.json (G*) in: "C:\Users\USUARIO\AppData\Roaming\Code\User\snippets"
-        If the path doesn't exist create it in "C:\Users\USUARIO\AppData\Roaming\Code\User"
+        Paste snippets/c.json (G*) in: "C:\Users\USER\AppData\Roaming\Code\User\snippets"
+        If the path doesn't exist create it in "C:\Users\USER\AppData\Roaming\Code\User"
 
         or
         
