@@ -50,4 +50,5 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.colorTheme": "Community Material Theme Palenight",
     "editor.mouseWheelZoom": true,
+    "editor.wordWrap": "on",
 }

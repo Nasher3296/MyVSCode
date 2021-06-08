@@ -35,6 +35,9 @@ Settings
             Zoom in/out with mouseWheelZoom (ctrl + scrollUp/Down)
             Settings    > Editor: Mouse wheel zoom > On
 
+            Make the code more comfortable to read
+            Editor: Word Wrap > On
+
 For more comfort open a folder to work files in it -->  ((ctrl + k) + (ctrl + o)) or  File > Open Folder
     You will need this to use some extensions, like Live Server
 

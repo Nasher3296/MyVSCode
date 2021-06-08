@@ -1,0 +1,83 @@
+Valida el html para corregir sintaxis y otros errores
+https://validator.w3.org/#validate_by_input
+
+<!--Lenguaje-->
+Justo antes del <head></head> indicar el lenguaje del contenido de la página. De no hacerlo o hacerlo de forma incorrecta se nos penalizará en el algoritmo.
+<html lang="es"></html>
+
+<!--Encabezados-->
+Marcan una jerarquia en los contenidos.
+Un h3 siempre debe ir dentro de un h2, un h2 dentro de h1 etc etc
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+<!--Parrafos-->
+Largos cuerpos de texto que contienen la informacion
+<p></p>
+
+<!--Saltos de linea-->
+Pone un enter manualmente
+<br>
+
+<!--Texto preformateado-->
+El texto ingresado mantiene el formato original.
+Respeta la tabulacion tal cual se encuentra en el archivo, los saltos de linea, etc.
+<pre></pre>
+
+<!--Identificadores-->
+Permiten referenciar elementos del HTML para manipularlos desde un archivo CSS o JS
+
+    class
+
+    Permite seleccionar elementos por clase. Esto permite referenciar a grupos especificos de elementos, no necesariamente del mismo tipo.
+
+    A cualquier etiqueta que luego le agreguemos un ".nombreDeClase" le asignaremos una clase.
+    Ej: "h1.juan" --> <h1 class="juan"></h1>
+
+
+    id
+
+    Es similar al class pero funciona para un unico elemento
+
+
+    etiqueta
+
+    Permite referenciar a todas las etiquetas del mismo tipo. Por ejemplo, si en CSS pongo h1{} modificaria todos los h1.
+
+<!--Div-->
+Crea bloques de contenido ideales para organizar
+
+Si escribimos ".nombreDeClase" creamos un div asociado a una clase, para el CSS
+
+<!--Organizacion de la página-->
+    <header></header>
+    Para el menu de navegacion, icono, etc. Es la barra superior, no suele contener informacion, sino herramientas.
+    <main></main>
+    Para el contenido principal.
+    <footer></footer>
+    Para el pie de pagina, donde suele haber info de contacto
+    
+<!--Grupos de contenido-->
+    <section></section>
+    
+    Es un contenedor genérico que agrupa contenido que
+    está relacionado. Cuando creamos bloques cuyo contenido es
+    parte de un bloque total usaremos section.
+    
+    <article></article>
+    
+    Es un contenedor que respresenta contenido
+    independiente, es decir, podemos leer ese fragmento en
+    cualquier otro sitio y tendría sentido por sí mismo.
+
+    Deben contener un header (h2,h3, etc) que los identifique.
+    Al ser contenido independiente tambien pueden contar con un <header></header>, <main></main> y <footer></footer>
+    
+    <aside></aside>
+    
+    se utiliza para representar contenido relacionado pero
+    que no forma parte del contenido principal
