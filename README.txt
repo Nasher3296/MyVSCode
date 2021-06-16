@@ -6,6 +6,10 @@ Download VSCode
 C instalation guide
     https://platzi.com/tutoriales/1189-algoritmos-2017/2765-compilando-cc-desde-visual-studio-code-windows-10/
 
+    or
+
+    https://www.youtube.com/watch?v=nkzkiLODxEU (creo que habia usado este, la verdad no me acuerdo)
+
 GitHub
     https://github.com/Nasher3296/MyVSCode
     itmems with (G*) are in my github
