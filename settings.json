@@ -1,7 +1,10 @@
 {
-    "todo-tree.tree.showScanModeButton": false,
-    "code-runner.saveAllFilesBeforeRun": true,
-    "code-runner.saveFileBeforeRun": true,
+    /*
+    Instalar el JDK de java en un lugar normal
+    "java.home": "D:\\Cursos\\Java\\jdk-15.0.1",
+    */
+    
+    
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -10,43 +13,78 @@
         "**/**.class": true,
         "**/.factorypath": true
     },
-    "explorer.confirmDelete": false,
-    "java.home": "D:\\Cursos\\Java\\jdk-15.0.1",
-    "[json]": {
-
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-        "editor.suggest.insertMode": "replace"
-    },
-    "terminal.integrated.allowChords": false,
-    "code-runner.runInTerminal": true,
-    "editor.renderWhitespace": "none",
+    
+    //Configuracion de fuente
     "editor.fontLigatures": true,
     "editor.fontFamily": "Jetbrains Mono",
-    "editor.fontSize": 16,
-    "launch": {
-
-        "configurations": [],
-        "compounds": []
-    },
-    "terminal.integrated.tabs.enabled": true,
-    "terminal.integrated.env.windows": {
     
-    },
-    "terminal.explorerKind": "external",
-    "terminal.external.windowsExec": "C:\\WINDOWS\\SYSTEM32\\cmd.exe",
-    "terminal.integrated.fontFamily": "Jetbrains Mono",
-    "c-cpp-compile-run.run-in-external-terminal": true,
-    "java.debug.settings.console": "externalTerminal",
-    "window.zoomLevel": 1,
-    "workbench.iconTheme": "material-icon-theme",
-    "C_Cpp.files.exclude": {
-        "**/.vscode": true
-    },
+    //Estilo visual de los iconos y el entorno (Extensiones)
+    "workbench.iconTheme": "material-icon-theme",   //De "Community Icon Theme"
+    "workbench.colorTheme": "Community Material Theme Palenight",   //De "Community Material Theme"
+
+    //Permite hacer zoom con ctrl + scroll
+    "editor.mouseWheelZoom": true,
+
+    //Ajusta los renglones para que no haya contenido por fuera del ancho de la pantalla. "Agrega enters" pero de forma visual nada mas
+    "editor.wordWrap": "on",
+
+    //Elimina mensaje molesto de extension para desarrollo web
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    //Aplica autoguardado
+    "files.autoSave": "afterDelay", 
+
+    //??
+    "workbench.startupEditor": "none",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.colorTheme": "Community Material Theme Palenight",
-    "editor.mouseWheelZoom": true,
-    "editor.wordWrap": "on",
+
+    //Para hacer debug con C
+    "launch": {
+        "configurations": [
+            {
+                "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",          //En esta linea se debe reemplazar la ruta por la ruta en la que se tenga instalado el compilador. La siguiente linea comentada es el ejemplo mas comun
+                //"miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",            //Si esta es tu ruta, borra la linea anterior y elimina el comentario de esta
+                "name": "C Debug",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${fileDirname}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                    {
+                        "description": "Habilitar la impresión con sangría para gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            },
+            /*
+            {
+                "name": "Otro lenguaje Debug",
+                "type": "",
+                "request": "launch",
+                "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${fileDirname}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "",
+                "miDebuggerPath": "",
+                "setupCommands": [
+                    {
+                        "description": "Habilitar la impresión con sangría para gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
+            */
+        ],
+    }
 }

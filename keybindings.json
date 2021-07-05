@@ -1,9 +1,46 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
+    //Comentar linea - No hace falta seleccionarla
     {
-        "key": "ctrl+alt+w",
-        "command": "editor.emmet.action.wrapWithAbbreviation"
+        "key": "ctrl+alt+x",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
     },
+    //Comentar bloque
+    {
+        "key": "ctrl+alt+c",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    //Borar linea
+    {
+        "key": "ctrl+alt+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    //Ir al final de la linea
+    {
+        "key": "ctrl+alt+right ctrl+alt+right",
+        "command": "cursorLineEnd"
+    },
+    //Seleccionar hasta el final de la linea
+    {
+        "key": "ctrl+shift+alt+right ctrl+shift+alt+right",
+        "command": "cursorLineEndSelect"
+    },
+    //Ir al principio de la linea
+    {
+        "key": "ctrl+alt+left ctrl+alt+left",
+        "command": "cursorLineStart"
+    },
+    //Seleccionar hasta el principio de la linea
+    {
+        "key": "ctrl+shift+alt+left ctrl+shift+alt+left",
+        "command": "cursorLineStartSelect"
+    },
+
+    //Control de terminal
+    /* 
     {
         "key": "ctrl+numpad8",
         "command": "workbench.action.terminal.resizePaneUp"
@@ -20,228 +57,145 @@
         "key": "ctrl+numpad6",
         "command": "workbench.action.terminal.resizePaneRight"
     },
+     */
+
+    //Correr tareas
+    //C
+        //Compilar y correr
+        {
+            "key": "ctrl+numpad0",
+            "command": "workbench.action.tasks.runTask",
+            "args": "C. Compilar y correr"
+        },
+        //Compilar
+        {
+            "key": "ctrl+numpad1",
+            "command": "workbench.action.tasks.runTask",
+            "args": "C. Compilar"
+        },
+        //Correr
+        {
+            "key": "ctrl+numpad2",
+            "command": "workbench.action.tasks.runTask",
+            "args": "C. Correr"
+        },
+    
+    //Control de terminal
+        //Matar terminal
+        {
+            "key": "ctrl+numpad_decimal",
+            "command": "workbench.action.terminal.kill"
+        },
+        //Focus en problems
+        {
+            "key": "ctrl+numpad4",
+            "command": "workbench.actions.view.problems",
+            "when": "workbench.panel.markers.view.active"
+        },
+        //Focus en outpot
+        {
+            "key": "ctrl+numpad5",
+            "command": "workbench.action.output.toggleOutput",
+            "when": "workbench.panel.output.active"
+        },
+        //Focus en terminal
+        {
+            "key": "ctrl+numpad6",
+            "command": "workbench.action.terminal.toggleTerminal",
+        },
+        //Focus en debug console
+        {
+            "key": "ctrl+numpad3",
+            "command": "workbench.debug.action.toggleRepl",
+        },
+        //Scroll abajo
+        {
+            "key": "ctrl+numpad8",
+            "command": "workbench.action.terminal.scrollDown"
+        },
+        //Scroll al fondo
+        {
+            "key": "ctrl+numpad_divide",
+            "command": "workbench.action.terminal.scrollToBottom"
+        },
+        //Scroll arriba
+        {
+            "key": "ctrl+numpad9",
+            "command": "workbench.action.terminal.scrollUp"
+        },
+        //Scroll al principio
+        {
+            "key": "ctrl+numpad_multiply",
+            "command": "workbench.action.terminal.scrollToTop"
+        },
+        
+    //Ajustar tamaño de terminal
+        //Agrandar
+        {
+            "key": "ctrl+numpad_add",
+            "command": "workbench.action.terminal.resizePaneUp"
+        },
+        //Achicar
+        {
+            "key": "ctrl+numpad_subtract",
+            "command": "workbench.action.terminal.resizePaneDown"
+        },
+
+    //Arbir consola
     {
-        "key": "alt+numpad_add",
-        "command": "code-runner.run"
+        "key": "ctrl+numpad7",
+        "command": "workbench.action.terminal.openNativeConsole",
     },
+
+    //Focus en un editor
     {
-        "key": "ctrl+alt+n",
-        "command": "-code-runner.run"
+        "key": "ctrl+alt+numpad5",
+        "command": "workbench.action.toggleEditorWidths"
     },
+    //Alternar layout horizonal/vertical
     {
-        "key": "ctrl+numpad0",
-        "command": "-workbench.action.zoomReset"
+        "key": "ctrl+alt+numpad2",
+        "command": "workbench.action.toggleEditorGroupLayout"
     },
+    //Focus en el siguiente grupo de editores
     {
-        "key": "ctrl+numpad5",
-        "command": "extension.CompileRunInExternalTerminal"
+        "key": "ctrl+alt+numpad8",
+        "command": "workbench.action.focusNextGroup"
     },
+    //Mueve el editor al siguiente grupo
     {
-        "key": "f8",
-        "command": "-extension.CompileRunInExternalTerminal"
+        "key": "ctrl+alt+numpad3",
+        "command": "workbench.action.moveEditorToNextGroup"
     },
+    //Mueve el editor al grupo anterior
     {
-        "key": "ctrl+numpad0",
-        "command": "workbench.action.output.toggleOutput",
-        "when": "workbench.panel.output.active"
+        "key": "ctrl+alt+numpad1",
+        "command": "workbench.action.moveEditorToPreviousGroup"
     },
-    {
-        "key": "ctrl+shift+u",
-        "command": "-workbench.action.output.toggleOutput",
-        "when": "workbench.panel.output.active"
-    },
-    {
-        "key": "ctrl+alt+x",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+oem_2",
-        "command": "-editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+alt+c",
-        "command": "editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+numpad4",
-        "command": "workbench.actions.view.problems",
-        "when": "workbench.panel.markers.view.active"
-    },
-    {
-        "key": "ctrl+shift+m",
-        "command": "-workbench.actions.view.problems",
-        "when": "workbench.panel.markers.view.active"
-    },
-    {
-        "key": "ctrl+alt+c",
-        "command": "-terminal.stop"
-    },
-    {
-        "key": "ctrl+shift+numpad_add",
-        "command": "workbench.action.zoomIn"
-    },
-    {
-        "key": "ctrl+numpad_add",
-        "command": "-workbench.action.zoomIn"
-    },
-    {
-        "key": "ctrl+numpad_add",
-        "command": "editor.action.fontZoomIn"
-    },
-    {
-        "key": "ctrl+numpad_subtract",
-        "command": "editor.action.fontZoomOut"
-    },
-    {
-        "key": "ctrl+oem_minus",
-        "command": "-workbench.action.zoomOut"
-    },
-    {
-        "key": "ctrl+oem_plus",
-        "command": "-workbench.action.zoomIn"
-    },
-    {
-        "key": "ctrl+shift+numpad_subtract",
-        "command": "workbench.action.zoomOut"
-    },
-    {
-        "key": "ctrl+numpad_subtract",
-        "command": "-workbench.action.zoomOut"
-    },
-    {
-        "key": "ctrl+alt+backspace",
-        "command": "editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+alt+right ctrl+alt+right",
-        "command": "cursorLineEnd"
-    },
-    {
-        "key": "ctrl+shift+alt+right ctrl+shift+alt+right",
-        "command": "cursorLineEndSelect"
-    },
-    {
-        "key": "ctrl+shift+m z",
-        "command": "workbench.action.toggleZenMode"
-    },
-    {
-        "key": "ctrl+k z",
-        "command": "-workbench.action.toggleZenMode"
-    },
-    {
-        "key": "ctrl+shift+m o",
-        "command": "editor.action.revealDefinitionAside",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-    },
-    {
-        "key": "ctrl+k f12",
-        "command": "-editor.action.revealDefinitionAside",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-    },
+    //Focus en el siguiente editor
     {
         "key": "ctrl+alt+numpad6",
         "command": "workbench.action.nextEditor"
     },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+alt+right",
-        "command": "-workbench.action.moveEditorToNextGroup"
-    },
+    //Focus en el editor anterior
     {
         "key": "ctrl+alt+numpad4",
         "command": "workbench.action.previousEditor"
     },
+    //Junta todos los editores en un unico grupo
     {
-        "key": "ctrl+pageup",
-        "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+alt+left",
-        "command": "-workbench.action.moveEditorToPreviousGroup"
-    },
-    {
-        "key": "ctrl+alt+m tab",
-        "command": "workbench.action.focusNextGroup"
-    },
-    {
-        "key": "ctrl+alt+m",
-        "command": "-code-runner.stop"
-    },
-    {
-        "key": "ctrl+alt+numpad2",
-        "command": "workbench.action.moveEditorToNextGroup"
-    },
-    {
-        "key": "ctrl+alt+numpad8",
-        "command": "workbench.action.moveEditorToPreviousGroup"
-    },
-    {
-        "key": "ctrl+alt+left ctrl+alt+left",
-        "command": "cursorLineStart"
-    },
-    {
-        "key": "ctrl+shift+alt+left ctrl+shift+alt+left",
-        "command": "cursorLineStartSelect"
-    },
-    {
-        "key": "ctrl+alt+m s",
-        "command": "workbench.action.toggleStatusbarVisibility"
-    },
-    {
-        "key": "ctrl+alt+numpad5",
-        "command": "workbench.action.toggleEditorGroupLayout"
-    },
-    {
-        "key": "shift+alt+0",
-        "command": "-workbench.action.toggleEditorGroupLayout"
-    },
-    {
-        "key": "ctrl+alt+numpad7",
-        "command": "workbench.action.moveEditorLeftInGroup"
-    },
-    {
-        "key": "ctrl+shift+pageup",
-        "command": "-workbench.action.moveEditorLeftInGroup"
-    },
-    {
-        "key": "ctrl+alt+numpad9",
-        "command": "workbench.action.moveEditorRightInGroup"
-    },
-    {
-        "key": "ctrl+shift+pagedown",
-        "command": "-workbench.action.moveEditorRightInGroup"
-    },
-    {
-        "key": "ctrl+alt+numpad1",
-        "command": "workbench.action.toggleEditorWidths"
-    },
-    {
-        "key": "ctrl+alt+numpad3",
+        "key": "ctrl+alt+numpad0",
         "command": "workbench.action.editorLayoutSingle"
     },
+    //Ubica el grupo abajo (Sirve para hacer layouts de 1:2)
     {
-        "key": "alt+numpad_subtract",
-        "command": "workbench.action.terminal.kill"
+        "key": "ctrl+alt+numpad9",
+        "command": "workbench.action.moveActiveEditorGroupDown"
     },
+    //Ubica el grupo a un lado (Revierte lo anterior)
     {
-        "key": "alt+numpad_decimal",
-        "command": "workbench.action.terminal.kill"
+        "key": "ctrl+alt+numpad7",
+        "command": "workbench.action.moveActiveEditorGroupLeft"
     }
+
 ]

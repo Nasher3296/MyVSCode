@@ -1,0 +1,67 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			//Va a ser necesario instalar la version 7 de powershell en caso de no tenerla, ya que sino no se reconocen los comandos con operadores '&&'
+			//https://github.com/PowerShell/PowerShell#get-powershell
+				//Ir al apartado "Get PowerShell" y descargar la version que corresponda a nuestro sistema (de la columna "Downloads (stable)")
+				//Una vez instalado, tomar de la ruta de instalacion de Powershell 7 la direccion de la carpeta "modules". La ruta predeterminada es: "C:\Program Files\PowerShell\7\Modules" y editar la variable de entorno del sistema "PSModulePath" con el valor de la misma.
+
+				//Como configurar Powershell7 como powershell predeterminado
+					//Buscar "entorno" en el buscador de windows
+					//Entrar en "Variables de entorno" (Ultimo boton, abajo a la derecha en la pestaña "opciones avanzadas")
+					//En el segundo grupo de configuraciones, "variables del sistema", buscar "PSModulePath", darle doble clic y reemplazar el valor de la variable por la ruta mencionada previamente.
+			"type": "cppbuild",
+			"label": "C. Compilar",
+			"command": "clear && C:\\msys64\\mingw64\\bin\\gcc.exe",		 //En esta linea se debe reemplazar la ruta por la ruta en la que se tenga instalado el compilador. La siguiente linea comentada es el ejemplo mas comun
+			//"command": "clear && C:\\mingw64\\bin\\gcc.exe",		Si esta es tu ruta, borra la linea anterior y elimina el comentario de esta
+			//Este cambio debe aplicarse a todas las lineas donde se encuentre la ruta en este archivo. La forma mas practica es seleccionar la ruta que está escrita y tocar "ctrl+shift+L" para poder editar todas a la vez.
+			"args": [
+				"-g3",
+				"-Wall",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe"
+		},
+		{
+			"type": "shell",
+			"label": "C. Compilar y correr",
+			"command": "clear && C:\\msys64\\mingw64\\bin\\gcc.exe -g3 -Wall \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "C. Correr",
+			"command": "clear && \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
+			"group": {
+				"kind": "build",
+			}
+		}
+	]
+}

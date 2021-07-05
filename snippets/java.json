@@ -1,18 +1,4 @@
 {
-	// Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-
 	"Salida en consola":{
 		"prefix": "sout",
 		"body": [
@@ -43,37 +29,4 @@
 		],
 		"description": "foreach",
 	},
-
-	"if":{
-		"prefix": "if"
-		"body": [
-			"if(${1:condition}){",
-			"\t${2:sentences}",
-			"}",
-			"${0}"
-		],
-		"description": "if",
-	},
-
-	"switch":{
-		"prefix": "switch"
-		"body": [
-			"switch(${1:condition}){",
-			"\tcase ${2:key}:",
-			"\t\t${3:sentences}",
-			"\t\tbreak;"
-			"\tdefault:",
-			"\t\t${4:sentences}",
-			"}",
-			"${0}"
-		],
-		"description": "switch sin flecha",
-	},
-	
-	"coment":{
-		"prefix": "coment"
-		"body": "/*$TM_SELECTED_TEXT*/",
-		"description": "",
-	},
-
 }
