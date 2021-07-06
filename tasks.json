@@ -13,15 +13,15 @@
 					//En el segundo grupo de configuraciones, "variables del sistema", buscar "PSModulePath", darle doble clic y reemplazar el valor de la variable por la ruta mencionada previamente.
 			"type": "cppbuild",
 			"label": "C. Compilar",
-			"command": "clear && C:\\msys64\\mingw64\\bin\\gcc.exe",		 //En esta linea se debe reemplazar la ruta por la ruta en la que se tenga instalado el compilador. La siguiente linea comentada es el ejemplo mas comun
+			"command": "C:\\msys64\\mingw64\\bin\\gcc.exe",		 //En esta linea se debe reemplazar la ruta por la ruta en la que se tenga instalado el compilador. La siguiente linea comentada es el ejemplo mas comun
 			//"command": "clear && C:\\mingw64\\bin\\gcc.exe",		Si esta es tu ruta, borra la linea anterior y elimina el comentario de esta
 			//Este cambio debe aplicarse a todas las lineas donde se encuentre la ruta en este archivo. La forma mas practica es seleccionar la ruta que está escrita y tocar "ctrl+shift+L" para poder editar todas a la vez.
 			"args": [
 				"-g3",
 				"-Wall",
-				"${file}",
+				"\"${file}\"",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -59,9 +59,6 @@
 				"$gcc"
 			],
 			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
-			"group": {
-				"kind": "build",
-			}
 		}
 	]
 }
