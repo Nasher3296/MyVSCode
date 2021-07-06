@@ -11,6 +11,8 @@ Importante:
     Si se utiliza la configuracion básica con las extensiones mencionadas previamente:
         Al usar ctrl+shift+p accedemos a un menú de busqueda de comandos. En él buscar "CompileRun: Compile with default flags & Run with default arguments" para compilar y correr.
 
+    Ruta predeterminada donde pegar los archivos: %appdata%/code/user (Botón Windows + R y pegar esa ruta para acceder a la carpeta)
+
 Descargar VSCode:
     https://code.visualstudio.com/
 
@@ -40,7 +42,7 @@ Extensiones recomendadas:
     C/C++   
         Esta es obligatoria en caso de querer utilizar C
     
-    C/C++ Compile Run
+    C/C++ Compile Run (Con esta extension tocando F8 compila el programa y lo corre en el CMD)
     Code Runner 
         Estas dos son necesarias para ahorrar el problema de configurar la compilacion y ahorrarse problemas
 
