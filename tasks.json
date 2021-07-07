@@ -29,8 +29,11 @@
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": "build",
-			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe"
+			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		},
 		{
 			"type": "shell",
@@ -43,10 +46,6 @@
 				"$gcc"
 			],
 			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
 		},
 		{
 			"type": "shell",

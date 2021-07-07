@@ -39,13 +39,13 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
-    //Para hacer debug con C
+    //Para hacer debug
     "launch": {
         "configurations": [
             {
+                "name": "C Debug",
                 "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",          //En esta linea se debe reemplazar la ruta por la ruta en la que se tenga instalado el compilador. La siguiente linea comentada es el ejemplo mas comun
                 //"miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",            //Si esta es tu ruta, borra la linea anterior y elimina el comentario de esta
-                "name": "C Debug",
                 "type": "cppdbg",
                 "request": "launch",
                 "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -61,7 +61,8 @@
                         "text": "-enable-pretty-printing",
                         "ignoreFailures": true
                     }
-                ]
+                ],
+                "preLaunchTask": "${defaultBuildTask}"      //Con esto nos aseguramos de que se compile antes de hacer debug
             },
             /*
             {
