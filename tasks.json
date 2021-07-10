@@ -3,6 +3,7 @@
 	"tasks": [
 		{
 			//Va a ser necesario instalar la version 7 de powershell en caso de no tenerla, ya que sino no se reconocen los comandos con operadores '&&'
+			//En caso de no querer instalar PW7 se pueden utilizar las tareas marcadas a partir de la linea 64
 			//https://github.com/PowerShell/PowerShell#get-powershell
 				//Ir al apartado "Get PowerShell" y descargar la version que corresponda a nuestro sistema (de la columna "Downloads (stable)")
 				//Una vez instalado, tomar de la ruta de instalacion de Powershell 7 la direccion de la carpeta "modules". La ruta predeterminada es: "C:\Program Files\PowerShell\7\Modules" y editar la variable de entorno del sistema "PSModulePath" con el valor de la misma.
@@ -58,6 +59,65 @@
 				"$gcc"
 			],
 			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
-		}
+		},
+
+		//Sin Powershell 7
+		{
+			"type": "shell",
+			"label": "C. Limpiar, Compilar y Correr",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"dependsOn":[
+				"Limpiar",
+				"C. Compilar 2.0",
+				"C. Correr 2.0"
+			]
+		},
+
+		{
+			"type": "shell",
+			"label": "Limpiar",
+			"command": "clear",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+		},
+
+		{
+			"type": "shell",
+			"label": "C. Correr 2.0",
+			"command": "\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
+		},
+
+		{
+			"type": "cppbuild",
+			"label": "C. Compilar 2.0",
+			"command": "C:\\msys64\\mingw64\\bin\\gcc.exe",		 
+			"args": [
+				"-g3",
+				"-Wall",
+				"\"${file}\"",
+				"-o",
+				"\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compilador: C:\\msys64\\mingw64\\bin\\gcc.exe",
+		},
 	]
 }
