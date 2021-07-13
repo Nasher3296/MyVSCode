@@ -83,7 +83,13 @@
         //Matar terminal
         {
             "key": "ctrl+numpad_decimal",
-            "command": "workbench.action.terminal.kill"
+            "command": "workbench.action.terminal.kill",
+            
+        },
+        {
+            "key": "ctrl+numpad_decimal",
+            "command": "workbench.action.tasks.terminate"
+            
         },
         //Focus en problems
         {
@@ -196,5 +202,4 @@
         "key": "ctrl+alt+numpad7",
         "command": "workbench.action.moveActiveEditorGroupLeft"
     }
-
 ]

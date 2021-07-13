@@ -51,7 +51,7 @@
 		{
 			"type": "shell",
 			"label": "C. Correr",
-			"command": "clear && \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+			"command": "\"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
 			"options": {
 				"cwd": "${fileDirname}"
 			},
