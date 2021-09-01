@@ -87,5 +87,7 @@
             }
             */
         ],
-    }
+    },
+    "explorer.confirmDragAndDrop": false,
+    "git.ignoreMissingGitWarning": true
 }

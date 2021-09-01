@@ -83,11 +83,6 @@
         //Matar terminal
         {
             "key": "ctrl+numpad_decimal",
-            "command": "workbench.action.terminal.kill",
-            
-        },
-        {
-            "key": "ctrl+numpad_decimal",
             "command": "workbench.action.tasks.terminate"
             
         },
@@ -190,7 +185,7 @@
     //Junta todos los editores en un unico grupo
     {
         "key": "ctrl+alt+numpad0",
-        "command": "workbench.action.editorLayoutSingle"
+        "command": "workbench.action.editorLayoutSingle",
     },
     //Ubica el grupo abajo (Sirve para hacer layouts de 1:2)
     {
