@@ -89,5 +89,6 @@
         ],
     },
     "explorer.confirmDragAndDrop": false,
-    "git.ignoreMissingGitWarning": true
+    "git.ignoreMissingGitWarning": true,
+    "diffEditor.ignoreTrimWhitespace": false
 }
