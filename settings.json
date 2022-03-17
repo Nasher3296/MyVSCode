@@ -19,8 +19,7 @@
     "editor.fontFamily": "Jetbrains Mono",
     
     //Estilo visual de los iconos y el entorno (Extensiones)
-    "workbench.iconTheme": "material-icon-theme",   //De "Community Icon Theme"
-    "workbench.colorTheme": "Community Material Theme Palenight",   //De "Community Material Theme"
+    "workbench.iconTheme": "material-icon-theme", //De "Community Material Theme"
 
     //Permite hacer zoom con ctrl + scroll
     "editor.mouseWheelZoom": true,
@@ -90,5 +89,8 @@
     },
     "explorer.confirmDragAndDrop": false,
     "git.ignoreMissingGitWarning": true,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": false,
+    "workbench.colorTheme": "Community Material Theme Palenight",
+    "window.zoomLevel": 1
 }
